@@ -16,8 +16,9 @@
 :root {
   --primary: hsl(180, 29%, 50%);
   --neutral-100: hsl(180, 31%, 95%);
-  --neutral-200: hsl(180, 8%, 52%);
-  ---neutral-300: hsl(180, 14%, 20%);
+  --neutral-200: hsl(180, 52%, 96%);
+  --neutral-300: hsl(180, 8%, 52%);
+  --neutral-400: hsl(180, 14%, 20%);
 }
 
 body {

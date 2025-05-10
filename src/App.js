@@ -1,6 +1,14 @@
 import Filters from "./Filters";
 
-const filters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+const filters = [
+  "Frontend",
+  "Frontend",
+  "Frontend",
+  "Frontend",
+  "Frontend",
+  "Frontend",
+  "Frontend",
+];
 
 function App() {
   return (

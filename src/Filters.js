@@ -13,7 +13,7 @@ const filtersContainerStyle = {
 
 const filtersStyle = {
   display: "flex",
-  gap: "1vh",
+  gap: "1rem",
   flexWrap: "wrap",
 };
 
