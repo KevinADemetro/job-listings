@@ -21,11 +21,13 @@ const filterStyle = {
   padding: "1vh 2vh",
 };
 
-export default function Filter({ filter }) {
+export default function Filter({ filter, onRemoveFilter }) {
   return (
     <span style={filterContainer}>
       <span style={filterStyle}>{filter}</span>
-      <button style={removeFilterStyle}>X</button>
+      <button style={removeFilterStyle} onClick={() => onRemoveFilter(filter)}>
+        X
+      </button>
     </span>
   );
 }

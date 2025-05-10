@@ -40,10 +40,20 @@ function App() {
     setFilters([]);
   }
 
+  function handleRemoveFilter(removedFilter) {
+    setFilters((filters) =>
+      filters.filter((filter) => filter !== removedFilter)
+    );
+  }
+
   return (
     <div className="App">
       <div className="filters">
-        <Filters filters={filters} onClearFilters={handleClearFilters} />
+        <Filters
+          filters={filters}
+          onClearFilters={handleClearFilters}
+          onRemoveFilter={handleRemoveFilter}
+        />
       </div>
       <JobsList jobs={filteredJobs} onSelectTag={handleSelectFilter} />
     </div>

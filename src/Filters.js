@@ -26,12 +26,20 @@ const clearButtonStyle = {
   backgroundColor: "transparent",
 };
 
-export default function Filters({ filters = [], onClearFilters }) {
+export default function Filters({
+  filters = [],
+  onClearFilters,
+  onRemoveFilter,
+}) {
   return (
     <div style={filtersContainerStyle}>
       <div style={filtersStyle}>
         {filters.map((filter) => (
-          <Filter filter={filter} key={crypto.randomUUID()} />
+          <Filter
+            filter={filter}
+            key={crypto.randomUUID()}
+            onRemoveFilter={onRemoveFilter}
+          />
         ))}
       </div>
       <button style={clearButtonStyle} onClick={onClearFilters}>
