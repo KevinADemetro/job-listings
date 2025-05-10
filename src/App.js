@@ -77,10 +77,14 @@ function App() {
     setFilters((filters) => [tag, ...filters]);
   }
 
+  function handleClearFilters() {
+    setFilters([]);
+  }
+
   return (
     <div className="App">
       <div className="filters">
-        <Filters filters={filters} />
+        <Filters filters={filters} onClearFilters={handleClearFilters} />
       </div>
       <JobsList jobs={jobs} onSelectTag={handleSelectFilter} />
     </div>
