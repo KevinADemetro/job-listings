@@ -13,11 +13,31 @@
   font-style: italic;
 }
 
+:root {
+  --primary: hsl(180, 29%, 50%);
+  --neutral-100: hsl(180, 31%, 95%);
+  --neutral-200: hsl(180, 8%, 52%);
+  ---neutral-300: hsl(180, 14%, 20%);
+}
+
 body {
   margin: 0;
   font-family: "Red Hat Text", sans-serif;
   background-image: url("../public/images/bg-header-desktop.svg"),
-    linear-gradient(hsl(180, 29%, 50%), hsl(180, 29%, 50%));
+    linear-gradient(var(--primary), var(--primary));
   background-repeat: repeat-x;
-  background-size: 100% 10vw, 100% 10vw;
+  background-size: 100% 15vh, 100% 15vh;
+  font-size: 15px;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  padding: 0 20vw;
+}
+
+.filters {
+  margin-top: 15vh;
+  transform: translateY(-50%);
+  width: 100%;
 }
