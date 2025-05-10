@@ -74,6 +74,7 @@ function App() {
   }, []);
 
   function handleSelectFilter(tag) {
+    if (filters.includes(tag)) return;
     setFilters((filters) => [tag, ...filters]);
   }
 
