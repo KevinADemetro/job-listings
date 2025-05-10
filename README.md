@@ -30,8 +30,8 @@ Antes de tudo, você precisa ter o **Node.js e o npm instalados** na sua máquin
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repo.git
-cd nome-do-repo
+git clone https://github.com/KevinADemetro/job-listings.git
+cd job-listings
 ```
 
 ### 2. Instale as dependências
