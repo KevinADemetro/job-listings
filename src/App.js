@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Filters from "./Filters";
 import JobsList from "./JobsList";
 
@@ -60,6 +61,17 @@ const jobs = [
 ];
 
 function App() {
+  const [jobs, setJobs] = useState([]);
+
+  useEffect(function () {
+    async function fetchJobs() {
+      const res = await fetch("http://localhost:3001/jobs");
+      const data = await res.json();
+      setJobs(data);
+    }
+    fetchJobs();
+  }, []);
+
   return (
     <div className="App">
       <div className="filters">

@@ -30,6 +30,7 @@ const tagStyle = {
   backgroundColor: "var(--neutral-200)",
   padding: "0.5rem",
   borderRadius: "0.5rem",
+  cursor: "pointer",
 };
 
 export default function Job({ job }) {
@@ -72,7 +73,9 @@ export default function Job({ job }) {
       </section>
       <ul style={tagListStyle}>
         {tags.map((tag) => (
-          <li style={tagStyle}>{tag}</li>
+          <li style={tagStyle} key={tag}>
+            {tag}
+          </li>
         ))}
       </ul>
     </li>
