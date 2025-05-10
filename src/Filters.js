@@ -8,13 +8,14 @@ const filtersContainerStyle = {
   backgroundColor: " hsl(180, 31%, 95%)",
   display: "flex",
   justifyContent: "space-between",
-  padding: "1vh 2vw",
+  padding: "3vh 2vw",
 };
 
 const filtersStyle = {
   display: "flex",
-  gap: "1rem",
   flexWrap: "wrap",
+  width: "100%",
+  gap: "2%",
 };
 
 const clearButtonStyle = {
@@ -22,6 +23,7 @@ const clearButtonStyle = {
   color: "hsl(180, 29.60%, 64.90%)",
   cursor: "pointer",
   fontWeight: "bold",
+  backgroundColor: "transparent",
 };
 
 export default function Filters({ filters = [] }) {
@@ -29,7 +31,7 @@ export default function Filters({ filters = [] }) {
     <div style={filtersContainerStyle}>
       <div style={filtersStyle}>
         {filters.map((filter) => (
-          <Filter filter={filter} />
+          <Filter filter={filter} key={crypto.randomUUID()} />
         ))}
       </div>
       <button style={clearButtonStyle}>Clear</button>
