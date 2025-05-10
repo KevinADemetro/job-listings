@@ -33,7 +33,7 @@ const tagStyle = {
   cursor: "pointer",
 };
 
-export default function Job({ job }) {
+export default function Job({ job, onSelectTag }) {
   const tags = [job.role, job.level, ...job.languages];
   return (
     <li style={jobStyle}>
@@ -73,7 +73,12 @@ export default function Job({ job }) {
       </section>
       <ul style={tagListStyle}>
         {tags.map((tag) => (
-          <li style={tagStyle} key={tag}>
+          <li
+            style={tagStyle}
+            key={tag}
+            role="button"
+            onClick={() => onSelectTag(tag)}
+          >
             {tag}
           </li>
         ))}

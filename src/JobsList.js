@@ -6,11 +6,11 @@ const listStyle = {
   flexDirection: "column",
 };
 
-export default function JobsList({ jobs = [] }) {
+export default function JobsList({ jobs = [], onSelectTag }) {
   return (
     <ul style={listStyle}>
       {jobs.map((job) => (
-        <Job job={job} key={job.id} />
+        <Job job={job} key={job.id} onSelectTag={onSelectTag} />
       ))}
     </ul>
   );

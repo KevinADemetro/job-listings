@@ -62,6 +62,7 @@ const jobs = [
 
 function App() {
   const [jobs, setJobs] = useState([]);
+  const [filters, setFilters] = useState([]);
 
   useEffect(function () {
     async function fetchJobs() {
@@ -72,12 +73,16 @@ function App() {
     fetchJobs();
   }, []);
 
+  function handleSelectFilter(tag) {
+    setFilters((filters) => [tag, ...filters]);
+  }
+
   return (
     <div className="App">
       <div className="filters">
         <Filters filters={filters} />
       </div>
-      <JobsList jobs={jobs} />
+      <JobsList jobs={jobs} onSelectTag={handleSelectFilter} />
     </div>
   );
 }
